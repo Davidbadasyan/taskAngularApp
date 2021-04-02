@@ -1,0 +1,76 @@
+.mainTable {
+    width: 50%;
+    height: 300px;
+}
+
+.listHeaders {
+    background-color: dodgerblue;
+    width: 100px;
+    height: 20px;
+    margin-left: 10px;
+    text-decoration: solid;
+    /* float:left; */
+} 
+
+tr td
+{
+    background-color: #fff;
+}
+
+tr:nth-child(even) td:nth-child(odd), 
+tr:nth-child(odd) td:nth-child(even)
+{
+    background-color: #ccc;
+}
+
+button {
+    position: relative;
+    background-color: #4CAF50;
+    border: none;
+    font-size: 14px;
+    color: #FFFFFF;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    margin: 10px;
+    left: 100px;
+    border-radius: 5px;
+    box-shadow: 2px 2px rgb(185, 183, 183);
+    outline: none;
+}
+  
+button:after {
+    content: "";
+    background: #90EE90;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px!important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+  
+button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+
+#emptyMessageSpan {
+    font-size: 28px;
+}
+
+#overflowMessage {
+    position: absolute;
+    top: 400px;
+    float: left;
+    font-size: 28px;
+}

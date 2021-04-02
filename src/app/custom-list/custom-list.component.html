@@ -1,0 +1,26 @@
+<div>
+    <table class="mainTable">
+        <thead>
+            <th class="listHeaders" *ngFor="let header of listHeaders">{{header}}</th>
+        </thead>
+        <span id="emptyMessageSpan" *ngIf="showEmptyMessage">List is now empty! Add more.</span>
+        <tbody>
+            <tr class="listRow" *ngFor="let name of carNames;
+                let i = index;
+                let isEven = even;
+                let isOdd = odd">
+                <td class="listElement">{{name}}</td>
+                <td class="listElement">{{i}}</td>
+                <td class="listElement">{{isEven}}</td>
+                <td class="listElement">{{isOdd}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <input #carInput type="text" placeholder="Write name">
+    <button (click)="addCar()">Add Car</button>
+    <button (click)="removeLastCar()">Remove Last Car</button>
+    <button (click)="removeFirstCar()">Remove First Car</button>
+
+
+</div>
+<span id="overflowMessage" *ngIf="showOverflowMessage">Maximum number of rows reached!</span>
